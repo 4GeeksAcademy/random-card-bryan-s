@@ -1,1 +1,98 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: green;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  width: 500px;
+  height: 700px;
+  border: 1px solid black;
+  border-radius: 13px;
+}
+
+.desc {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 100px;
+}
+
+.number {
+  position: absolute;
+  font-size: xx-large;
+}
+
+.card::before {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 70px;
+}
+
+.card::after {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  font-size: 70px;
+}
+
+.card.spade::before,
+.card.spade::after {
+  content: "\2660";
+}
+
+.card.club::before,
+.card.club::after {
+  content: "\2663";
+}
+
+.card.heart::before,
+.card.heart::after {
+  content: "\2665";
+  color: red;
+}
+
+.card.diamond::before,
+.card.diamond::after {
+  content: "\2666";
+  color: red;
+}
+
+.btn1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40%;
+}
